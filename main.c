@@ -3,8 +3,7 @@
 //
 #include <stdio.h>
 
-int incremento, matrizA[10][10];
-// TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+int incremento, matrizA[10][10], matrizB[10][10];
 int alocacao(int x, int y);
 void apresentacao();
 
@@ -14,7 +13,7 @@ int main() {
     int indiceX;
     int indiceY;
 
-    //int matrizB[10][10];
+
     printf("insira o valor a ser incrementado: ");
     scanf("%d", &incremento);
     printf("insira o indice da linha e da coluna (respectivamente) a ser incrementado: ");
@@ -22,7 +21,7 @@ int main() {
 
     alocacao(indiceX, indiceY);
     apresentacao();
-    //std::cout << "Hello and welcome to " << lang << "!\n";
+
 
 
 
@@ -32,7 +31,11 @@ int main() {
 void apresentacao() {
     for (int x = 0; x < 10; x++) {
         for (int y = 0; y < 10; y++) {
-            printf("%3d", matrizA[x][y]);
+            printf("%3d,", matrizA[x][y]);
+        }
+        printf("\n \t");
+        for (int y = 0; y < 10; y++) {
+            printf("%3d", matrizB[x][y]);
         }
         printf("\n");
     }
